@@ -29,13 +29,15 @@ public class Game {
             int mapOption = scanner.nextInt();
             switch(mapOption)
             {
+                case 1, 2:
+                {
+                    createMap(mapOption);
+                    break;
+                }
                 case 3:
                 {
                     run = false;
-                }
-                default:
-                {
-                    createMap(mapOption);
+                    break;
                 }
             }
         }
