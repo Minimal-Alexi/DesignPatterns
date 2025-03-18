@@ -4,8 +4,8 @@ import Tiles.AbstractTile;
 
 public abstract class Map {
     private final int mapSize = 5;
-    private AbstractTile[][] tiles = new AbstractTile[mapSize][mapSize];
-    public abstract AbstractTile createTile();
+    protected AbstractTile[][] tiles = new AbstractTile[mapSize][mapSize];
+    protected abstract AbstractTile createTile();
     public void display(){
         for(int i = 0; i < mapSize; i++){
             for(int j = 0; j < mapSize; j++){
