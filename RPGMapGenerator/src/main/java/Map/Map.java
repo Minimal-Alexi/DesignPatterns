@@ -9,7 +9,7 @@ public abstract class Map {
     public void display(){
         for(int i = 0; i < mapSize; i++){
             for(int j = 0; j < mapSize; j++){
-                System.out.print(tiles[i][j].getDescriptorCharacter());
+                System.out.print(" " + tiles[i][j].getDescriptorCharacter() + " ");
             }
             System.out.println();
         }
