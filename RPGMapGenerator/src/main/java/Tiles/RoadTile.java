@@ -1,7 +1,7 @@
 package Tiles;
 
 public class RoadTile extends AbstractTile {
-    protected char descriptorCharacter = 'r';
+    protected char descriptorCharacter = 'R';
     protected String description = "road";
 
     @Override

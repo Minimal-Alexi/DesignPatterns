@@ -1,7 +1,7 @@
 package Tiles;
 
 public class ForestTile extends AbstractTile{
-    protected char descriptorCharacter = 'f';
+    protected char descriptorCharacter = 'F';
     protected String description = "forest";
 
     @Override
