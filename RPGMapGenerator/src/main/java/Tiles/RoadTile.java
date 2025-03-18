@@ -1,8 +1,9 @@
 package Tiles;
 
 public class RoadTile extends AbstractTile {
-    protected char descriptorCharacter = 'R';
-    protected String description = "road";
+    public RoadTile() {
+        super('R',"roads");
+    }
 
     @Override
     public void action() {

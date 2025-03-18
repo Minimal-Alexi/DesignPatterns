@@ -1,8 +1,9 @@
 package Tiles;
 
 public class BuildingTile extends AbstractTile {
-    protected char descriptorCharacter = 'B';
-    protected String description = "building";
+    public BuildingTile() {
+        super('B',"building");
+    }
 
     @Override
     public void action() {

@@ -1,8 +1,9 @@
 package Tiles;
 
 public class SwampTile extends AbstractTile {
-    protected char descriptorCharacter = 'S';
-    protected String description = "swamp";
+    public SwampTile() {
+        super('S',"swamp");
+    }
 
     @Override
     public void action() {

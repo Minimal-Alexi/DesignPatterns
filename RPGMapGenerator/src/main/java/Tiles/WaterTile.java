@@ -1,8 +1,9 @@
 package Tiles;
 
 public class WaterTile extends AbstractTile{
-    protected char descriptorCharacter = 'W';
-    protected String description = "water";
+    public WaterTile() {
+        super('W',"water");
+    }
 
     @Override
     public void action() {
