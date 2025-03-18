@@ -1,8 +1,8 @@
 package Tiles;
 
 public abstract class AbstractTile {
-    private char descriptorCharacter;
-    private String description;
+    protected char descriptorCharacter;
+    protected String description;
 
     public char getDescriptorCharacter() {
         return descriptorCharacter;
