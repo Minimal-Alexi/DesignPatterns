@@ -3,9 +3,9 @@ import Map.*;
 import java.util.Scanner;
 
 public class Game {
-    private static Map gameMap;
     private static void createMap(int mapOption)
     {
+        Map gameMap;
         if(mapOption == 1)
         {
             gameMap = new CityMap();
