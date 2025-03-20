@@ -4,13 +4,13 @@ public class Main {
     public static void main(String[] args) {
         ButtonA buttonA = new ButtonA("LMAO");
         buttonA.display();
-        CheckboxA checkboxA = new CheckboxA("LMAO");
+        CheckBoxA checkboxA = new CheckBoxA("LMAO");
         checkboxA.display();
         TextFieldA textFieldA = new TextFieldA("LMAO");
         textFieldA.display();
         ButtonB buttonB = new ButtonB("LMAO");
         buttonB.display();
-        CheckboxB checkboxB = new CheckboxB("LMAO");
+        CheckBoxB checkboxB = new CheckBoxB("LMAO");
         checkboxB.display();
         TextFieldB textFieldB = new TextFieldB("LMAO");
         textFieldB.display();
