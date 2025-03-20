@@ -1,6 +1,8 @@
-package UI_Classes;
+package UI_Classes.Implementations;
 
-public class ButtonA extends Button{
+import UI_Classes.Button;
+
+public class ButtonA extends Button {
 
     public ButtonA(String text)
     {

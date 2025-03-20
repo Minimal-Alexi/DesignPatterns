@@ -1,4 +1,4 @@
-import UI_Classes.ButtonA;
+import UI_Classes.Implementations.ButtonA;
 
 public class Main {
     public static void main(String[] args) {
