@@ -3,8 +3,10 @@ package UI_Classes.Implementations;
 import UI_Classes.TextField;
 
 public class TextFieldA extends TextField {
+
+
     public TextFieldA(String text) {
-        super.text = text;
+        super(text);
     }
 
     @Override

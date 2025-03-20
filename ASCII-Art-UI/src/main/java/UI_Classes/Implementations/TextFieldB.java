@@ -4,7 +4,7 @@ import UI_Classes.TextField;
 
 public class TextFieldB extends TextField {
     public TextFieldB(String text) {
-        super.text = text;
+        super(text);
     }
 
     @Override

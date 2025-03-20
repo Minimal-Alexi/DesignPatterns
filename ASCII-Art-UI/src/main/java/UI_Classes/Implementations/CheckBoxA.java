@@ -3,8 +3,10 @@ package UI_Classes.Implementations;
 import UI_Classes.CheckBox;
 
 public class CheckBoxA extends CheckBox {
+
+
     public CheckBoxA(String text) {
-        super.text = text;
+        super(text);
     }
 
     @Override
