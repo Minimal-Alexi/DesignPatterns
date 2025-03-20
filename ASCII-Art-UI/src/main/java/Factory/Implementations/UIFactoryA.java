@@ -1,5 +1,6 @@
-package Factory;
+package Factory.Implementations;
 
+import Factory.UIFactory;
 import UI_Classes.Button;
 import UI_Classes.CheckBox;
 import UI_Classes.Implementations.ButtonA;
