@@ -6,19 +6,19 @@ public class ButtonA extends Button {
 
     public ButtonA(String text)
     {
-        super.text = text;
+        super(text);
     }
 
     @Override
     public void display() {
         drawLine();
-        System.out.println("|" + text + "|");
+        System.out.println("|" + super.text + "|");
         drawLine();
     }
     private void drawLine()
     {
         System.out.print(".");
-        for(int i = 0; i < text.length(); i++)
+        for(int i = 0; i < super.text.length(); i++)
         {
             System.out.print("_");
         }
