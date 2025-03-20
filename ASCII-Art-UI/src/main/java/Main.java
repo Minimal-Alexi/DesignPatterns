@@ -5,6 +5,8 @@ import UI_Classes.*;
 import UI_Classes.Button;
 import UI_Classes.TextField;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         UIFactory uiFactoryA,uiFactoryB;
@@ -31,5 +33,13 @@ public class Main {
         textFieldB.display();
         checkboxB = uiFactoryB.createCheckBox("CheckBoxB");
         checkboxB.display();
+
+        // Set Text example
+        System.out.println("\nSet text example");
+        buttonA.display();
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        buttonA.setText(string);
+        buttonA.display();
     }
 }
