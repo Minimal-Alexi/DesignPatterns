@@ -9,14 +9,14 @@ public class ButtonA extends Button{
 
     @Override
     public void display() {
-        drawWidth();
+        drawLine();
         System.out.println("|" + text + "|");
+        drawLine();
     }
-    private void drawWidth()
+    private void drawLine()
     {
-        int length = 2 + text.length();
         System.out.print(".");
-        for(int i = 0; i < length; i++)
+        for(int i = 0; i < text.length(); i++)
         {
             System.out.print("_");
         }
