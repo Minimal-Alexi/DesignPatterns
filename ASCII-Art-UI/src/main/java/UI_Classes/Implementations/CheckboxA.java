@@ -1,4 +1,9 @@
 package UI_Classes.Implementations;
 
-public class CheckboxA {
+import UI_Classes.CheckBox;
+
+public class CheckboxA extends CheckBox {
+    public CheckboxA(String text) {
+        super.text = text;
+    }
 }
