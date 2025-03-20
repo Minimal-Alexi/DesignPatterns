@@ -1,6 +1,4 @@
-import UI_Classes.Implementations.ButtonA;
-import UI_Classes.Implementations.CheckboxA;
-import UI_Classes.Implementations.TextFieldA;
+import UI_Classes.Implementations.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,5 +8,11 @@ public class Main {
         checkboxA.display();
         TextFieldA textFieldA = new TextFieldA("LMAO");
         textFieldA.display();
+        ButtonB buttonB = new ButtonB("LMAO");
+        buttonB.display();
+        CheckboxB checkboxB = new CheckboxB("LMAO");
+        checkboxB.display();
+        TextFieldB textFieldB = new TextFieldB("LMAO");
+        textFieldB.display();
     }
 }
