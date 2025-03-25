@@ -1,3 +1,6 @@
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamWriter;
+
 public abstract class Component {
     protected String name;
 
@@ -6,6 +9,8 @@ public abstract class Component {
     }
 
     public abstract void printData();
+
+    protected abstract void printData(XMLStreamWriter writer) throws XMLStreamException;
 
     public abstract void addComponent(Component component);
 

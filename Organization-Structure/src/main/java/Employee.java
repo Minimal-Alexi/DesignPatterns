@@ -1,3 +1,7 @@
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamWriter;
+
 public class Employee extends Component{
     private float salary;
     public Employee(String name, float salary) {
@@ -7,7 +11,29 @@ public class Employee extends Component{
 
     @Override
     public void printData() {
-
+        XMLOutputFactory factory = XMLOutputFactory.newInstance();
+        XMLStreamWriter writer = null;
+        try {
+            writer = factory.createXMLStreamWriter(System.out, "UTF-8");
+            writer.writeStartDocument("UTF-8", "1.0");
+            printData(writer);
+            writer.writeEndDocument();
+            writer.flush();
+        } catch (XMLStreamException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (writer != null) writer.close();
+            } catch (XMLStreamException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    protected void printData(XMLStreamWriter writer) throws XMLStreamException {
+        writer.writeStartElement("Employee");
+        writer.writeAttribute("Name", name);
+        writer.writeAttribute("Salary", String.valueOf(salary));
+        writer.writeEndElement();
     }
 
     @Override
