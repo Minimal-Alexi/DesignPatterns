@@ -2,26 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class WeatherStation {
-    private List<Observer> observers;
-    private Random rand = new Random();
+public class WeatherStation extends Observable {
+    private final Random rand = new Random();
     private float temperature;
     private String weather;
     public WeatherStation() {
-        observers = new ArrayList<Observer>();
+        super();
         temperature = rand.nextFloat(-20,20);
         generateWeather();
     }
-    public void addObserver(Observer observer) {
-        observers.add(observer);
+    public float getTemperature() {
+        return temperature;
     }
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-    public void notifyObservers() {
-        for (Observer observer : observers) {
-            observer.update();
-        }
+    public String getWeather() {
+        return weather;
     }
     public void run()
     {
