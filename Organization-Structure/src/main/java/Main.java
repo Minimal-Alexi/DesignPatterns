@@ -37,6 +37,7 @@ public class Main {
         busDepartment.addComponent(busDriver2);
 
         // Printing timeeeeeee
+        initialNode.printData();
 
     }
 }

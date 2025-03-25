@@ -30,9 +30,9 @@ public class Employee extends Component{
         }
     }
     protected void printData(XMLStreamWriter writer) throws XMLStreamException {
-        writer.writeStartElement("Employee");
-        writer.writeAttribute("Name", name);
-        writer.writeAttribute("Salary", String.valueOf(salary));
+        writer.writeStartElement("employee");
+        writer.writeAttribute("name", name);
+        writer.writeAttribute("salary", String.valueOf(salary));
         writer.writeEndElement();
     }
 
