@@ -10,8 +10,6 @@ public abstract class Component {
 
     public abstract void printData();
 
-    protected abstract void printData(XMLStreamWriter writer) throws XMLStreamException;
-
     public abstract void addComponent(Component component);
 
     public abstract void removeComponent(Component component);
