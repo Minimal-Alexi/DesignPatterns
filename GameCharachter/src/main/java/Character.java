@@ -2,14 +2,11 @@ import java.util.Scanner;
 
 public class Character {
     private static Scanner scanner = new Scanner(System.in);
-    private int level, exp, healthPoints;
+    private int exp, healthPoints;
     private String name;
     private State levelState;
     public Character(String name) {
         this.name = name;
-    }
-    public void levelUp() {
-        level++;
     }
     public void addExp(int exp) {
         this.exp += exp;
