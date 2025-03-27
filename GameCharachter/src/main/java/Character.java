@@ -27,7 +27,10 @@ public class Character {
         return levelState;
     }
     public int readUserChoice(String[] options) {
-        System.out.println("\nSelect an option:");
+        System.out.println("\nYou are: " + getName());
+        System.out.println("You currently have: " + getExp() + " exp");
+        System.out.println("You currently have: " + getHealthPoints() + " health points");
+        System.out.println("Select an option:");
         for (int i = 1; i <= options.length; i++) {
             System.out.println(i + ". " + options[i-1]);
         }

@@ -19,10 +19,17 @@ public class ExpertState extends State {
                 break;
             }
             case 3: {
-                this.getCharacter().changeHealthPoints(-50);
-                this.getCharacter().addExp(100);
-                if (this.getCharacter().getExp() == 1000) {
-                    this.getCharacter().setLevelState(new MasterState(this.getCharacter()));
+                if(this.getCharacter().getHealthPoints() > 50)
+                {
+                    this.getCharacter().changeHealthPoints(-50);
+                    this.getCharacter().addExp(100);
+                    if (this.getCharacter().getExp() == 1000) {
+                        this.getCharacter().setLevelState(new MasterState(this.getCharacter()));
+                    }
+                }
+                else
+                {
+                    System.out.println("You don't have enough HP!");
                 }
                 break;
             }
