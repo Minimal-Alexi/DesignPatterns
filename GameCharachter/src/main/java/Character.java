@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Character {
     private static Scanner scanner = new Scanner(System.in);
     private int exp, healthPoints;
-    private String name;
+    private final String name;
     private State levelState;
     public Character(String name) {
         this.name = name;
@@ -32,5 +32,12 @@ public class Character {
             System.out.println(i + ". " + options[i-1]);
         }
         return scanner.nextInt();
+    }
+    public void setLevelState(State levelState) {
+        resetExp();
+        this.levelState = levelState;
+    }
+    private void resetExp(){
+        exp = 0;
     }
 }
