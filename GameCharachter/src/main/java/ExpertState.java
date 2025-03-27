@@ -9,7 +9,7 @@ public class ExpertState extends State {
         switch (this.getCharacter().readUserChoice(options)) {
             case 1: {
                 this.getCharacter().addExp(25);
-                if (this.getCharacter().getExp() == 1000) {
+                if (this.getCharacter().getExp() >= 1000) {
                     System.out.println("Level up");
                     this.getCharacter().setLevelState(new MasterState(this.getCharacter()));
                 }
@@ -24,7 +24,7 @@ public class ExpertState extends State {
                 {
                     this.getCharacter().changeHealthPoints(-50);
                     this.getCharacter().addExp(100);
-                    if (this.getCharacter().getExp() == 1000) {
+                    if (this.getCharacter().getExp() >= 1000) {
                         System.out.println("Level up");
                         this.getCharacter().setLevelState(new MasterState(this.getCharacter()));
                     }

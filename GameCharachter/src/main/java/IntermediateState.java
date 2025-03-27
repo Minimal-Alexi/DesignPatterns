@@ -10,7 +10,7 @@ public class IntermediateState extends State {
             case 1:
             {
                 this.getCharacter().addExp(25);
-                if(this.getCharacter().getExp() == 200)
+                if(this.getCharacter().getExp() >= 200)
                 {
                     System.out.println("Level up");
                     this.getCharacter().setLevelState(new ExpertState(this.getCharacter()));

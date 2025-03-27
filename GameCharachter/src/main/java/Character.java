@@ -8,7 +8,7 @@ public class Character {
     public Character(String name) {
         this.name = name;
         levelState = new NoviceState(this);
-        this.healthPoints = 0;
+        this.healthPoints = 100;
     }
     public void addExp(int exp) {
         this.exp += exp;
