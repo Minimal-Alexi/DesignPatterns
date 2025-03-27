@@ -7,6 +7,7 @@ public class Character {
     private State levelState;
     public Character(String name) {
         this.name = name;
+        levelState = new NoviceState(this);
     }
     public void addExp(int exp) {
         this.exp += exp;
@@ -39,6 +40,13 @@ public class Character {
     public void setLevelState(State levelState) {
         resetExp();
         this.levelState = levelState;
+    }
+    public void run(){
+        if(levelState instanceof MasterState)
+        {
+            return;
+        }
+        levelState.action();
     }
     private void resetExp(){
         exp = 0;
