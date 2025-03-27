@@ -12,8 +12,9 @@ public class NoviceState extends State {
                 this.getCharacter().addExp(25);
                 if(this.getCharacter().getExp() == 100)
                 {
-                    this.getCharacter().setLevelState();
+                    this.getCharacter().setLevelState(new IntermediateState(this.getCharacter()));
                 }
+                break;
             }
         }
     }
