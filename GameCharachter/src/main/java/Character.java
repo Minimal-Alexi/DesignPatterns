@@ -8,6 +8,7 @@ public class Character {
     public Character(String name) {
         this.name = name;
         levelState = new NoviceState(this);
+        this.healthPoints = 0;
     }
     public void addExp(int exp) {
         this.exp += exp;
@@ -42,11 +43,10 @@ public class Character {
         this.levelState = levelState;
     }
     public void run(){
-        if(levelState instanceof MasterState)
+        while(!(levelState instanceof MasterState))
         {
-            return;
+            levelState.action();
         }
-        levelState.action();
     }
     private void resetExp(){
         exp = 0;
