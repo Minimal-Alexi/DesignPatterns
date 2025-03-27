@@ -8,6 +8,27 @@ public class Character {
     public Character(String name) {
         this.name = name;
     }
+    public void levelUp() {
+        level++;
+    }
+    public void addExp(int exp) {
+        this.exp += exp;
+    }
+    public void changeHealthPoints(int healthPoints) {
+        this.healthPoints += healthPoints;
+    }
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+    public int getExp() {
+        return exp;
+    }
+    public String getName() {
+        return name;
+    }
+    public State getLevelState() {
+        return levelState;
+    }
     public int readUserChoice(String[] options) {
         System.out.println("\nSelect an option:");
         for (int i = 1; i <= options.length; i++) {
