@@ -47,6 +47,7 @@ public class Character {
         {
             levelState.action();
         }
+        levelState.action();
     }
     private void resetExp(){
         exp = 0;
