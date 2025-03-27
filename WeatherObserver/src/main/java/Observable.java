@@ -5,13 +5,13 @@ public class Observable {
     public Observable() {
         observers = new ArrayList<>();
     }
-    public void addObserver(Observer observer) {
+    public synchronized void addObserver(Observer observer) {
         observers.add(observer);
     }
-    public void removeObserver(Observer observer) {
+    public synchronized void removeObserver(Observer observer) {
         observers.remove(observer);
     }
-    public void notifyObservers() {
+    public synchronized void notifyObservers() {
         for (Observer observer : observers) {
             observer.update();
         }

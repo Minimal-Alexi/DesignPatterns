@@ -6,13 +6,11 @@ public class WeatherStation extends Observable {
     private final Random rand = new Random();
     private float temperature;
     private String weather;
-    private final Timer timerTemp, timerWeather;
+    private Timer timerTemp;
     public WeatherStation() {
         super();
         temperature = rand.nextFloat(-20,20);
         generateWeather();
-        timerTemp = new Timer();
-        timerWeather = new Timer();
     }
     public float getTemperature() {
         return temperature;
@@ -21,20 +19,15 @@ public class WeatherStation extends Observable {
         return weather;
     }
     public void start() {
+        timerTemp = new Timer();
         timerTemp.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 temperature += rand.nextFloat() * 10 - 5;
-                notifyObservers();
-            }
-        }, 0, 5000);
-        timerWeather.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
                 generateWeather();
                 notifyObservers();
             }
-        },0,60000);
+        }, 0, 5000);
     }
     private void generateWeather() {
         int weatherValue = rand.nextInt(3);
@@ -58,7 +51,6 @@ public class WeatherStation extends Observable {
     }
     public void stop() {
         timerTemp.cancel();
-        timerWeather.cancel();
     }
 
 }
