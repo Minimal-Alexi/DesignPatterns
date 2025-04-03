@@ -4,6 +4,6 @@ public class HandlerCompensation extends Handler{
     }
 
     public void handle(Message message) {
-        System.out.println("Hey " + message.getSenderEmail() + " please receive the 5 euro compensation for the: " + message.getMessage() + "\n Kind regards,");
+        System.out.println("Hey " + message.getSenderEmail() + " please receive the 5 euro compensation for the: " + message.getMessage() + greeting);
     }
 }

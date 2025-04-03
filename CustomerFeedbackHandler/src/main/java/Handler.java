@@ -1,4 +1,5 @@
 public abstract class Handler {
+    protected final String greeting = "\n Kind regards,\n Minimal Works Fi \n\n";
     private final FeedbackEnum feedback;
     private Handler nextHandler;
     public Handler(FeedbackEnum feedback) {
