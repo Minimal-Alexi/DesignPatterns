@@ -1,6 +1,9 @@
 public abstract class Handler {
-    private FeedbackEnum feedback;
+    private final FeedbackEnum feedback;
     private Handler nextHandler;
+    public Handler(FeedbackEnum feedback) {
+        this.feedback = feedback;
+    }
     public abstract void handle(Message message);
     public void process(Message message) {
         if(message.getFeedbackType() == feedback) {
