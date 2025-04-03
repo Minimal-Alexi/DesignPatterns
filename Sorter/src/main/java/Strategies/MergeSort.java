@@ -42,9 +42,10 @@ public class MergeSort implements SorterStrategy{
                 i++;
             }
             else {
-                arrayList.set(k,tempLeft[j]);
+                arrayList.set(k,tempRight[j]);
                 j++;
             }
+            k++;
         }
         while (i < sizeLeft) {
             arrayList.set(k,tempLeft[i]);
