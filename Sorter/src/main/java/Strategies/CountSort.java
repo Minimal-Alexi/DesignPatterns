@@ -16,7 +16,7 @@ public class CountSort implements SorterStrategy{
             countList[arrayList.get(i)]++;
         }
         ArrayList<Integer> sortedList = new ArrayList<>();
-        for (int i = 0; i <= countList.length; i++) {
+        for (int i = 0; i < countList.length; i++) {
             while (countList[i] < 0) {
                 sortedList.add(i);
                 countList[i]--;
