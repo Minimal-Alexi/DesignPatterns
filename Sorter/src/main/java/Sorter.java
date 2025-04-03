@@ -13,9 +13,11 @@ public class Sorter {
         ArrayList<Integer> sortedList = strategy.sort(list);
         long endTime = System.currentTimeMillis();
         long elapsedTime = endTime - startTime;
-        elapsedTime = elapsedTime / 1000;
         if(sortCheck(sortedList)) {
-            System.out.println("List of " + sortedList.size() + " elements sorted in " + elapsedTime + "s using the: " + strategy.getName());
+            System.out.println("List of " + sortedList.size() + " elements sorted in " + elapsedTime + "ms using the: " + strategy.getName());
+        }
+        else {
+            System.out.println("List of " + sortedList.size() + " elements failed sorting in " + elapsedTime + "ms using the: " + strategy.getName());
         }
     }
     public void setStrategy(SorterStrategy strategy){
