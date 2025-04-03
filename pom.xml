@@ -18,6 +18,7 @@
         <module>GameCharachter</module>
         <module>Sorter</module>
         <module>CustomerFeedbackHandler</module>
+        <module>GameFramework</module>
     </modules>
 
     <properties>
