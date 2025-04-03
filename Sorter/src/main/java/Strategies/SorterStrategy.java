@@ -1,3 +1,5 @@
+package Strategies;
+
 import java.util.ArrayList;
 
 public interface SorterStrategy {
