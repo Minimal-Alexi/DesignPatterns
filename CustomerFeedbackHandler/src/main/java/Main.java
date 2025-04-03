@@ -18,6 +18,11 @@ public class Main {
         for(int i = 0; i < messageNr; i++) {
             compensationHandler.process(generateMessage());
         }
+        System.out.println("We are removing the general feedback handler to showcase what happens when no one is responsible");
+        contactHandler.setNextHandler(null);
+        for(int i = 0; i < messageNr; i++) {
+            compensationHandler.process(generateMessage());
+        }
 
     }
     private static void setupMessages(){
