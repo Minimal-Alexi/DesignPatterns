@@ -6,7 +6,7 @@ public class CountSort implements SorterStrategy{
     @Override
     public ArrayList<Integer> sort(ArrayList<Integer> arrayList) {
         int max = arrayList.get(0);
-        for (int i = 0; i < arrayList.size() - 1; i++) {
+        for (int i = 0; i < arrayList.size(); i++) {
             if (arrayList.get(i) > max) {
                 max = arrayList.get(i);
             }
@@ -17,7 +17,7 @@ public class CountSort implements SorterStrategy{
         }
         ArrayList<Integer> sortedList = new ArrayList<>();
         for (int i = 0; i < countList.length; i++) {
-            while (countList[i] < 0) {
+            while (countList[i] > 0) {
                 sortedList.add(i);
                 countList[i]--;
             }
