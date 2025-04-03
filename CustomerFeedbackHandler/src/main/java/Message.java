@@ -10,4 +10,13 @@ public class Message {
     public FeedbackEnum getFeedbackType() {
         return feedbackType;
     }
+    public void setFeedbackType(FeedbackEnum feedbackType) {
+        this.feedbackType = feedbackType;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public void setSenderEmail(String senderEmail) {
+        this.senderEmail = senderEmail;
+    }
 }

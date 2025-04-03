@@ -5,7 +5,7 @@ public abstract class Handler {
     public Handler(FeedbackEnum feedback) {
         this.feedback = feedback;
     }
-    public abstract void handle(Message message);
+    protected abstract void handle(Message message);
     public void process(Message message) {
         if(message.getFeedbackType() == feedback) {
             handle(message);
