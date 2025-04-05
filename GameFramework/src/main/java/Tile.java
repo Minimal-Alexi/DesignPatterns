@@ -43,9 +43,11 @@ public class Tile {
         }
     }
     public void changeOwnership(Player player) {
-        this.player.changeResourceOil(-incomeOil);
-        this.player.changeResourceSteel(-incomeSteel);
-        this.player.changeResourceRubber(-incomeRubber);
+        if(this.player != null) {
+            this.player.changeResourceOil(-incomeOil);
+            this.player.changeResourceSteel(-incomeSteel);
+            this.player.changeResourceRubber(-incomeRubber);
+        }
         this.player = player;
         sendResources();
     }
@@ -53,6 +55,12 @@ public class Tile {
         this.player.changeResourceSteel(incomeSteel);
         this.player.changeResourceOil(incomeOil);
         this.player.changeResourceRubber(incomeRubber);
+    }
+    public Player getOwner() {
+        return this.player;
+    }
+    public TileType getType(){
+        return this.type;
     }
     private int strengthCalculator(ArrayList<Units> units){
         int strength = 0;
