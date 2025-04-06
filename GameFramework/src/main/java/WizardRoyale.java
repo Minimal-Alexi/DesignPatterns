@@ -13,57 +13,57 @@ public class WizardRoyale extends Game{
 
     @Override
     public boolean endOfGame() {
-        return wizardsList.size() == 1;
+
     }
 
     @Override
     public void playSingleTurn(int player) {
-        System.out.println("You are " + wizardsList.get(player).getName() + ", you currently have " + wizardsList.get(player).getHp() + " health.");
-        System.out.println("Shield status: " + wizardsList.get(player).isShielded());
-        System.out.println("Please select a number: \n" +
-                "1. Shield\n" +
-                "2. Heal\n" +
-                "3. Cast fireball");
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
-        switch (option) {
-            case 1: {
-                wizardsList.get(player).activateShield();
-                break;
-            }
-            case 2: {
-                wizardsList.get(player).heal();
-                break;
-            }
-            case 3: {
-                System.out.println("Attack one of the following wizards");
-                int attackOption = 0;
-                for(Wizard wizard : wizardsList) {
-                    if(wizard != wizardsList.get(player)) {
-                        System.out.println(attackOption+". "+ wizard.getName() + " (" + wizard.getHp() +")" +" Shielded: " + wizard.isShielded());
-                    }
-                    else {
-                        System.out.println(attackOption+". This is you." + " (" + wizard.getHp() +")" + " Shielded: " + wizard.isShielded());
-                    }
-                    attackOption += 1;
+        if (wizardsList.get(player).getHp() != 0) {
+            System.out.println("You are " + wizardsList.get(player).getName() + ", you currently have " + wizardsList.get(player).getHp() + " health.");
+            System.out.println("Shield status: " + wizardsList.get(player).isShielded());
+            System.out.println("Please select a number: \n" +
+                    "1. Shield\n" +
+                    "2. Heal\n" +
+                    "3. Cast fireball");
+            Scanner scanner = new Scanner(System.in);
+            int option = scanner.nextInt();
+            switch (option) {
+                case 1: {
+                    wizardsList.get(player).activateShield();
+                    break;
                 }
-                attackOption = scanner.nextInt();
-                Wizard attackedWizard = wizardsList.get(attackOption);
-                attackedWizard.attacked();
-                if(attackedWizard.getHp() <= 0) {
-                    wizardsList.remove(attackOption);
+                case 2: {
+                    wizardsList.get(player).heal();
+                    break;
                 }
-                break;
+                case 3: {
+                    System.out.println("Attack one of the following wizards");
+                    int attackOption = 0;
+                    for (Wizard wizard : wizardsList) {
+                        if (wizard != wizardsList.get(player)) {
+                            System.out.println(attackOption + ". " + wizard.getName() + " (" + wizard.getHp() + ")" + " Shielded: " + wizard.isShielded());
+                        } else {
+                            System.out.println(attackOption + ". This is you." + " (" + wizard.getHp() + ")" + " Shielded: " + wizard.isShielded());
+                        }
+                        attackOption += 1;
+                    }
+                    attackOption = scanner.nextInt();
+                    Wizard attackedWizard = wizardsList.get(attackOption);
+                    attackedWizard.attacked();
+                    break;
+                }
             }
         }
+        else{
+            System.out.println("You are already dead. Necromancers aren't in the game.");
+        }
     }
-
     @Override
     public void displayWinner() {
         System.out.println("You won " + wizardsList.get(0).getName());
     }
     public static void main(String[] args) {
         Game game = new WizardRoyale();
-        game.play(2);
+        game.play(3);
     }
 }
