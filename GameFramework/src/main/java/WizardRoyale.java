@@ -13,7 +13,20 @@ public class WizardRoyale extends Game{
 
     @Override
     public boolean endOfGame() {
-
+        int aliveCount = 0;
+        Wizard lastAlive = null;
+        for (Wizard wizard : wizardsList) {
+            if (wizard.getHp() > 0) {
+                aliveCount++;
+                lastAlive = wizard;
+            }
+        }
+        if (aliveCount == 1) {
+            wizardsList.clear();
+            wizardsList.add(lastAlive);
+            return true;
+        }
+        return false;
     }
 
     @Override
