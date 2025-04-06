@@ -13,7 +13,7 @@ public class WizardRoyale extends Game{
 
     @Override
     public boolean endOfGame() {
-        return false;
+        return wizardsList.size() == 1;
     }
 
     @Override
@@ -50,6 +50,9 @@ public class WizardRoyale extends Game{
                 attackOption = scanner.nextInt();
                 Wizard attackedWizard = wizardsList.get(attackOption);
                 attackedWizard.attacked();
+                if(attackedWizard.getHp() <= 0) {
+                    wizardsList.remove(attackOption);
+                }
                 break;
             }
         }
@@ -57,10 +60,10 @@ public class WizardRoyale extends Game{
 
     @Override
     public void displayWinner() {
-
+        System.out.println("You won " + wizardsList.get(0).getName());
     }
     public static void main(String[] args) {
         Game game = new WizardRoyale();
-        game.play(4);
+        game.play(2);
     }
 }
