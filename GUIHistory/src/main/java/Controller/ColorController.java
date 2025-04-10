@@ -1,6 +1,5 @@
 package Controller;
 
-import Model.ColorBox;
 import Model.IMemento;
 import Model.State;
 import javafx.fxml.FXML;
