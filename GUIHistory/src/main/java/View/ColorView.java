@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ColorView extends Application {
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ColorView.class.getResource("color-main.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ColorView.class.getResource("/color-main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Color View");
         stage.setScene(scene);
