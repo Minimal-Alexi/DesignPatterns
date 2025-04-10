@@ -22,13 +22,10 @@ public class ColorBox {
     }
 
     public Color getColor() {
-        Color currentColor = color[colorIndex];
-        System.out.println("Retrieving color at index " + colorIndex + ": " + currentColor);
-        return currentColor;
+        return color[colorIndex];
     }
 
     public int getColorIndex() {
-        System.out.println("Retrieving current color index: " + colorIndex);
         return colorIndex;
     }
 }

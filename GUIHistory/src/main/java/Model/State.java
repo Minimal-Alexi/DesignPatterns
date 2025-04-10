@@ -61,6 +61,5 @@ public class State {
         State selectedState = selectedMemento.getState();
         this.colorBoxes = selectedState.getColorBoxes();
         this.isSelected = selectedState.isSelected();
-        System.out.println("State restored: isSelected = " + this.isSelected);
     }
 }
