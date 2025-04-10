@@ -14,4 +14,7 @@ public class ColorBox {
     public Color getColor() {
         return color[colorIndex];
     }
+    public int getColorIndex() {
+        return colorIndex;
+    }
 }
