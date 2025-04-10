@@ -24,6 +24,7 @@ public class ColorController {
     }
 
     private void rectangleInitialization(Rectangle rectangle, int rectangleOption) {
+        rectangle.setFill(state.getOption(rectangleOption));
         rectangle.setOnMouseClicked(event -> {
             int currentIndex = state.getColorBoxes()[rectangleOption - 1].getColorIndex();
 
