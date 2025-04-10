@@ -58,8 +58,7 @@ public class State {
     public void restoreState(IMemento memento) {
         System.out.println("Restoring state from memento");
         Memento selectedMemento = (Memento) memento;
-        State selectedState = selectedMemento.getState();
-        this.colorBoxes = selectedState.getColorBoxes();
-        this.isSelected = selectedState.isSelected();
+        this.colorBoxes = selectedMemento.getColorBoxes();
+        this.isSelected = selectedMemento.isSelected();
     }
 }

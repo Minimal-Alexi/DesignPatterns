@@ -1,12 +1,17 @@
 package Model;
 
 public class Memento implements IMemento{
-    private State state;
+    private ColorBox[] colorBoxes;
+    private boolean isSelected;
     public Memento(State state) {
-        this.state = state;
+        this.colorBoxes = state.getColorBoxes().clone();
+        this.isSelected = state.isSelected();
         System.out.println("Memento created");
     }
-    public State getState() {
-        return state;
+    public ColorBox[] getColorBoxes() {
+        return colorBoxes;
+    }
+    public boolean isSelected() {
+        return isSelected;
     }
 }
