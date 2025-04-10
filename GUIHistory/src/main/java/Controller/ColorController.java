@@ -21,6 +21,7 @@ public class ColorController {
         rectangleInitialization(rectangle1,1);
         rectangleInitialization(rectangle2,2);
         rectangleInitialization(rectangle3,3);
+        checkboxInitialization();
     }
 
     private void rectangleInitialization(Rectangle rectangle, int rectangleOption) {
@@ -32,6 +33,12 @@ public class ColorController {
 
             state.setOptionChoice(rectangleOption, nextIndex);
             rectangle.setFill(state.getOption(rectangleOption));
+        });
+    }
+    private void checkboxInitialization() {
+        state.setSelected(checkboxSelected.isSelected());
+        checkboxSelected.setOnAction(event -> {
+            state.setSelected(checkboxSelected.isSelected());
         });
     }
 
