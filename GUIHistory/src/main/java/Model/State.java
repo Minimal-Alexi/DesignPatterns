@@ -1,23 +1,28 @@
 package Model;
 
+import javafx.scene.paint.Color;
+
 public class State {
-    private int[] options;
+    private ColorBox[] colorBoxes;
     private boolean isSelected;
 
     public State() {
-        options = new int[3];
+        colorBoxes = new ColorBox[3];
+        for (int i = 0; i < colorBoxes.length; i++) {
+            colorBoxes[i] = new ColorBox();
+        }
         isSelected = false;
     }
     public void setOptionChoice(int option,int choice) {
         if(option >= 1 && option <= 3) {
-            options[option - 1] = choice;
+            colorBoxes[option - 1].setColorIndex(choice);
         }
     }
-    public int getOption(int option){
+    public Color getOption(int option){
         if(option >= 1 && option <= 3) {
-            return options[option - 1];
+            return colorBoxes[option - 1].getColor();
         }
-        return -1;
+        return null;
     }
     public boolean isSelected() {
         return isSelected;
@@ -25,8 +30,8 @@ public class State {
     public void setSelected(boolean selected) {
         isSelected = selected;
     }
-    public int[] getOptions() {
-        return options;
+    public ColorBox[] getColorBoxes() {
+        return colorBoxes;
     }
     public IMemento createMemento() {
         return new Memento(this);
@@ -34,7 +39,7 @@ public class State {
     public void restoreState(IMemento memento) {
         Memento selectedMemento = (Memento) memento;
         State selectedState = selectedMemento.getState();
-        this.options = selectedState.getOptions();
+        this.colorBoxes = selectedState.getColorBoxes();
         this.isSelected = selectedState.isSelected();
     }
 }
