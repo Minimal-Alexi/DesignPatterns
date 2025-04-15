@@ -58,8 +58,10 @@ public class Controller {
 
     public void restoreState(IMemento memento) {
         if (memento != null) {
-            saveToHistory();
+            history.clear();
+            redoHistory.clear();
             model.restoreState(memento);
+            history.add(model.createMemento());
             gui.updateGui();
         }
     }
