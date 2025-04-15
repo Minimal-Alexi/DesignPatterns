@@ -1,4 +1,5 @@
-public interface IMemento {
-    // memento metadata methods
+import java.sql.Timestamp;
 
+public interface IMemento {
+    public Timestamp getTimestamp();
 }
