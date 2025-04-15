@@ -52,6 +52,17 @@ public class Controller {
             gui.updateGui();
         }
     }
+    public List<IMemento> getHistory() {
+        return new ArrayList<>(history);
+    }
+
+    public void restoreState(IMemento memento) {
+        if (memento != null) {
+            saveToHistory();
+            model.restoreState(memento);
+            gui.updateGui();
+        }
+    }
 
 
     private void saveToHistory() {

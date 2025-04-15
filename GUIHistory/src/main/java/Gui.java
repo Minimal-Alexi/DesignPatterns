@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -47,8 +48,15 @@ public class Gui extends Application {
         Label labelRedo = new Label("Press Ctrl-Y to redo the last change.");
         labelRedo.setPadding(insets);
 
+        Button button = new Button("History button");
+        button.setPadding(insets);
+        button.setOnAction(e -> {
+            System.out.println("Opening History Window");
+            new HistoryWindow(controller).show();
+        });
+
         // create a VBox that contains the HBox and the CheckBox
-        VBox vBox = new VBox(hBox, checkBox, labelUndo, labelRedo);
+        VBox vBox = new VBox(hBox, checkBox, labelUndo, labelRedo,button);
         // call controller when the CheckBox is clicked
         checkBox.setOnAction(event -> {
             controller.setIsSelected(checkBox.isSelected());
@@ -70,7 +78,7 @@ public class Gui extends Application {
 
 
         stage.setScene(scene);
-        stage.setTitle("Memento Pattern Example");
+        stage.setTitle("Memento Pattern");
         stage.show();
     }
 
