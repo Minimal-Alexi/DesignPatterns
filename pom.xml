@@ -20,6 +20,7 @@
         <module>CustomerFeedbackHandler</module>
         <module>GameFramework</module>
         <module>GUIHistory</module>
+        <module>ProxyDocument</module>
     </modules>
 
     <properties>
