@@ -1,19 +1,21 @@
 import java.sql.Timestamp;
 
 public class DocumentProxy implements Document{
-
+    private String content;
+    private Timestamp creationDate;
+    private int id;
     @Override
     public String getContent() {
-        return "";
+        return content;
     }
 
     @Override
     public int getUID() {
-        return 0;
+        return id;
     }
 
     @Override
     public Timestamp getCreationDate() {
-        return null;
+        return creationDate;
     }
 }
