@@ -1,3 +1,5 @@
+package Security;
+
 public class User {
     private String username;
     public User(String username) {

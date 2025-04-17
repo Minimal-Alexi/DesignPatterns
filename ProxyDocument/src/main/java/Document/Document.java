@@ -1,3 +1,7 @@
+package Document;
+
+import Security.User;
+
 import java.nio.file.AccessDeniedException;
 import java.sql.Timestamp;
 

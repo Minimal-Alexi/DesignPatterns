@@ -1,3 +1,7 @@
+package Document;
+
+import Security.User;
+
 import java.sql.Timestamp;
 
 public class DocumentReal implements Document {
