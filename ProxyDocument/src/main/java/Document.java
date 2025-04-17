@@ -1,7 +1,8 @@
+import java.nio.file.AccessDeniedException;
 import java.sql.Timestamp;
 
 public interface Document {
-    String getContent();
+    String getContent(User user) throws AccessDeniedException;
     int getUID();
     Timestamp getCreationDate();
 }

@@ -5,7 +5,7 @@ public class DocumentReal implements Document {
     private Timestamp creationDate;
     private int id;
     @Override
-    public String getContent() {
+    public String getContent(User user) {
         return content;
     }
 

@@ -9,7 +9,7 @@ public class AccessControlService {
         }
         return instance;
     }
-    public boolean isAllowed(User user){
+    public boolean isAllowed(int UID,User user){
         return true;
     }
 }
