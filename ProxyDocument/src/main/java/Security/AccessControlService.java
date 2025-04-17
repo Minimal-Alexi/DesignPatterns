@@ -17,8 +17,8 @@ public class AccessControlService {
         }
         return instance;
     }
-    public void grantAccess(int userId, User user) {
-        accessMap.computeIfAbsent(userId, k -> new HashSet<>()).add(user.getUsername());
+    public void grantAccess(int documentId, User user) {
+        accessMap.computeIfAbsent(documentId, k -> new HashSet<>()).add(user.getUsername());
     }
     public boolean isAllowed(int UID,User user){
         return accessMap.containsKey(UID) && accessMap.get(UID).contains(user.getUsername());
