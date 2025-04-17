@@ -4,8 +4,8 @@ import java.sql.Timestamp;
 public class DocumentProxy implements Document{
     private final DocumentReal documentReal;
     private final AccessControlService accessControlService = AccessControlService.getInstance();
-    public DocumentProxy(int UID, String content) {
-        documentReal = new DocumentReal(content,new Timestamp(System.currentTimeMillis()),UID);
+    public DocumentProxy(DocumentReal documentReal) {
+        this.documentReal = documentReal;
     }
     @Override
     public String getContent(User user) throws AccessDeniedException {
