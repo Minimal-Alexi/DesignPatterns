@@ -1,5 +1,6 @@
 import Document.*;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class Library {
@@ -16,7 +17,11 @@ public class Library {
     public Document getDocument(int index) {
         return documentLibrary.get(index);
     }
-    public DocumentProxy secureDocument(DocumentReal realDocument) {
+    public DocumentReal createUnsecureDocument(int UID, String content){
+        return new DocumentReal(content,new Timestamp(System.currentTimeMillis()),UID);
+    }
+    public DocumentProxy createSecureDocument(int UID, String content) {
+        DocumentReal realDocument = createUnsecureDocument(UID, content);
         return new DocumentProxy(realDocument);
     }
 }
