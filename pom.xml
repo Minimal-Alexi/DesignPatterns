@@ -22,6 +22,7 @@
         <module>GUIHistory</module>
         <module>ProxyDocument</module>
         <module>FileSystem</module>
+        <module>ComputerBuilder</module>
     </modules>
 
     <properties>
