@@ -5,7 +5,9 @@ public class FileTypeVisitor implements FileSystemVisitor{
     }
     @Override
     public void visit(File file) {
-        System.out.println("File: " + file.getFileName() + file.getFileType() + " matches searched type.");
+        if(file.getFileType().equals(fileType)){
+            System.out.println("File: " + file.getFileName() + file.getFileType() + " matches searched type.");
+        }
     }
 
     @Override
