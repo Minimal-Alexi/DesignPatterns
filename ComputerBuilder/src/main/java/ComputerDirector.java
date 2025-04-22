@@ -3,7 +3,14 @@ public class ComputerDirector {
     public ComputerDirector(ComputerBuilderI builder) {
         this.builder = builder;
     }
-    public Computer buildBadComputer() {
+    public void buildBadComputer() {
 
     }
+    public void buildAverageComputer() {
+
+    }
+    public void buildGoodComputer() {
+
+    }
+
 }

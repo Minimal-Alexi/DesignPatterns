@@ -6,5 +6,4 @@ public interface ComputerBuilderI {
     public void buildGPU();
     public void buildOS();
     public Computer getComputer();
-    public void restartBuild();
 }
