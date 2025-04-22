@@ -1,4 +1,4 @@
-public class File {
+public class File implements FileSystemElement{
     private String fileName;
     private String fileType;
     private int fileSize; // kb
@@ -6,5 +6,14 @@ public class File {
         this.fileName = fileName;
         this.fileType = fileType;
         this.fileSize = fileSize;
+    }
+    public String getFileName(){
+        return fileName;
+    }
+    public int getFileSize(){
+        return fileSize;
+    }
+    public String getFileType(){
+        return fileType;
     }
 }

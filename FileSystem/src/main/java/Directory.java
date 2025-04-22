@@ -1,10 +1,14 @@
 import java.util.ArrayList;
 
-public class Directory {
+public class Directory implements FileSystemElement{
     private String name;
     private ArrayList<FileSystemElement> files;
     public Directory(String name) {
         this.name = name;
         files = new ArrayList<>();
     }
+    public String getName() {
+        return name;
+    }
+
 }
