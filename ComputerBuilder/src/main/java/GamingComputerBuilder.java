@@ -1,7 +1,7 @@
 public class GamingComputerBuilder implements ComputerBuilderI{
     private Computer computer;
     private int quality;
-    public GamingComputerBuilder(int quality){
+    public GamingComputerBuilder(){
         computer = new Computer();
     }
     @Override
