@@ -1,8 +1,4 @@
 public class GamingComputerBuilder implements ComputerBuilderI{
-    @Override
-    public void setQuality(int quality) {
-
-    }
 
     @Override
     public void buildCPU() {
