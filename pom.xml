@@ -23,6 +23,7 @@
         <module>ProxyDocument</module>
         <module>FileSystem</module>
         <module>ComputerBuilder</module>
+        <module>CalendarAdapter</module>
     </modules>
 
     <properties>
