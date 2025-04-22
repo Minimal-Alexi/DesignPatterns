@@ -10,7 +10,12 @@ public class Directory implements FileSystemElement{
     public String getName() {
         return name;
     }
-
+    public void addElement(FileSystemElement element) {
+        files.add(element);
+    }
+    public void removeElement(int index) {
+        files.remove(index);
+    }
     @Override
     public void accept(FileSystemVisitor visitor) {
         for (FileSystemElement element : files) {
