@@ -11,4 +11,10 @@ public class Directory implements FileSystemElement{
         return name;
     }
 
+    @Override
+    public void accept(FileSystemVisitor visitor) {
+        for (FileSystemElement element : files) {
+            element.accept(visitor);
+        }
+    }
 }

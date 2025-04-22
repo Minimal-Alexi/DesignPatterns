@@ -16,4 +16,9 @@ public class File implements FileSystemElement{
     public String getFileType(){
         return fileType;
     }
+
+    @Override
+    public void accept(FileSystemVisitor visitor) {
+        visitor.visit(this);
+    }
 }
