@@ -5,5 +5,6 @@ public interface ComputerBuilderI {
     public void buildHardDrive();
     public void buildGPU();
     public void buildOS();
+    public void buildPrepackagedSoftware();
     public Computer getComputer();
 }

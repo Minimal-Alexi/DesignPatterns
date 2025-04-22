@@ -32,7 +32,10 @@ public class OfficeComputerBuilder implements ComputerBuilderI{
     public void buildOS() {
         computer.addComponent(new Component("AppleOS",quality));
     }
-
+    @Override
+    public void buildPrepackagedSoftware() {
+        computer.addComponent(new Component("Adobe Suite",quality));
+    }
     @Override
     public Computer getComputer() {
         return computer;

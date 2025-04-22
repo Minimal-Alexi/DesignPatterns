@@ -34,6 +34,11 @@ public class GamingComputerBuilder implements ComputerBuilderI{
     }
 
     @Override
+    public void buildPrepackagedSoftware() {
+        computer.addComponent(new Component("Nvidia Geforce App",quality));
+    }
+
+    @Override
     public Computer getComputer() {
         return computer;
     }
