@@ -21,6 +21,7 @@
         <module>GameFramework</module>
         <module>GUIHistory</module>
         <module>ProxyDocument</module>
+        <module>FileSystem</module>
     </modules>
 
     <properties>
