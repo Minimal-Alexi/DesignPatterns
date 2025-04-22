@@ -1,5 +1,10 @@
 public class GamingComputerBuilder implements ComputerBuilderI{
-
+    private Computer computer;
+    private int quality;
+    public GamingComputerBuilder(int quality){
+        computer = new Computer();
+        this.quality = quality;
+    }
     @Override
     public void buildCPU() {
 

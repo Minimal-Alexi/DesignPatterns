@@ -1,7 +1,10 @@
 public class OfficeComputerBuilder implements ComputerBuilderI{
     private Computer computer;
     private int quality;
-
+    public OfficeComputerBuilder(int quality) {
+        computer = new Computer();
+        this.quality = quality;
+    }
     @Override
     public void buildCPU() {
 
