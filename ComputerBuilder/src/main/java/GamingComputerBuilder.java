@@ -3,6 +3,8 @@ public class GamingComputerBuilder implements ComputerBuilderI{
     private int quality;
     public GamingComputerBuilder(int quality){
         computer = new Computer();
+    }
+    public void setQuality(int quality){
         this.quality = quality;
     }
     @Override
