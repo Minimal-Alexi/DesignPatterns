@@ -24,6 +24,7 @@
         <module>FileSystem</module>
         <module>ComputerBuilder</module>
         <module>CalendarAdapter</module>
+        <module>FlyweightRPGMap</module>
     </modules>
 
     <properties>
