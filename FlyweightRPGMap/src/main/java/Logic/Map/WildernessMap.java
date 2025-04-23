@@ -1,14 +1,13 @@
-package Map;
+package Logic.Map;
 
-import Tiles.AbstractTile;
-import Tiles.BuildingTile;
-import Tiles.ForestTile;
-import Tiles.RoadTile;
+import Logic.Tiles.AbstractTile;
+import Logic.Tiles.ForestTile;
+import Logic.Tiles.SwampTile;
+import Logic.Tiles.WaterTile;
 
 import java.util.Random;
 
-public class CityMap extends Map {
-
+public class WildernessMap extends Map {
     @Override
     protected AbstractTile createTile(){
         Random rand = new Random();
@@ -16,7 +15,7 @@ public class CityMap extends Map {
         {
             case 0:
             {
-                return new RoadTile();
+                return new SwampTile();
             }
             case 1:
             {
@@ -24,7 +23,7 @@ public class CityMap extends Map {
             }
             case 2:
             {
-                return new BuildingTile();
+                return new WaterTile();
             }
         }
         return null;

@@ -1,4 +1,4 @@
-package Tiles;
+package Logic.Tiles;
 
 public class RoadTile extends AbstractTile {
     public RoadTile() {

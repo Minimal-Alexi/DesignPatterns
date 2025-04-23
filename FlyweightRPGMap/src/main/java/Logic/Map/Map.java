@@ -1,6 +1,6 @@
-package Map;
+package Logic.Map;
 
-import Tiles.AbstractTile;
+import Logic.Tiles.AbstractTile;
 
 public abstract class Map {
     private final int mapSize = 5;
