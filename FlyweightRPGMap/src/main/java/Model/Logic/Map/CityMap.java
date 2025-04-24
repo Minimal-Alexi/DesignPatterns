@@ -1,9 +1,9 @@
-package Logic.Map;
+package Model.Logic.Map;
 
-import Logic.Tiles.AbstractTile;
-import Logic.Tiles.BuildingTile;
-import Logic.Tiles.ForestTile;
-import Logic.Tiles.RoadTile;
+import Model.Logic.Tiles.AbstractTile;
+import Model.Logic.Tiles.BuildingTile;
+import Model.Logic.Tiles.ForestTile;
+import Model.Logic.Tiles.RoadTile;
 
 import java.util.Random;
 

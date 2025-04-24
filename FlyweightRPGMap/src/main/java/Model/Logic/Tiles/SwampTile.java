@@ -1,4 +1,4 @@
-package Logic.Tiles;
+package Model.Logic.Tiles;
 
 public class SwampTile extends AbstractTile {
     public SwampTile() {

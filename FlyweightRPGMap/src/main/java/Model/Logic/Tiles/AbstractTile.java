@@ -1,4 +1,4 @@
-package Logic.Tiles;
+package Model.Logic.Tiles;
 
 public abstract class AbstractTile {
     protected char descriptorCharacter;
