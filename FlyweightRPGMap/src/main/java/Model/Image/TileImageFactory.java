@@ -1,24 +1,37 @@
 package Model.Image;
 
 import Model.Logic.Tiles.AbstractTile;
+import Model.Logic.Tiles.TileEnum;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class TileImageFactory {
-    private static final Map<AbstractTile,TileImage> images = new HashMap<AbstractTile,TileImage>();
+    private static final Map<TileEnum,TileImage> images = new HashMap<TileEnum,TileImage>();
     public static TileImage getTileImage(AbstractTile tile) {
-        TileImage image = images.get(tile);
+        TileEnum tileType = tile.getTileType();
+        TileImage image = images.get(tileType);
         if (image == null) {
-            switch (tile) {
-                case SUMMER:
-                    image = new TreeImage("birch_summer.png", "Leafy birch tree");
-                    break;
-                case WINTER:
-                    image = new TreeImage("birch_winter.png", "Leafless birch tree");
-                    break;
+            switch (tileType) {
+                case ROAD:{
+
+                }
+                case BUILDING:{
+
+                }
+                case SWAMP:{
+
+                }
+                case FOREST:{
+
+                }
+                case WATER:{
+
+                }
+                default:{
+                    throw new IllegalArgumentException("Unsupported tile type: " + tileType);
+                }
             }
-            images.put(type, image);
         }
         return image;
     }
