@@ -13,7 +13,9 @@ public abstract class AbstractTile {
         this.descriptorCharacter = descriptorCharacter;
         this.description = description;
     }
-
+    public TileImage getImage() {
+        return image;
+    }
     public char getDescriptorCharacter() {
         return descriptorCharacter;
     }
