@@ -23,7 +23,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
             <Label text="Map Size (Maximum is 30):" />
-            <TextField prefHeight="25.0" prefWidth="287.0" />
+            <TextField fx:id="textFieldMapSize" prefHeight="25.0" prefWidth="287.0" />
          </children>
          <VBox.margin>
             <Insets />
