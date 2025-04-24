@@ -4,7 +4,7 @@ import Model.Logic.Tiles.AbstractTile;
 
 public abstract class Map {
     private final int mapSize;
-    private AbstractTile[][] map;
+    private final AbstractTile[][] map;
     public Map(int mapSize) {
         this.mapSize = mapSize;
         map = new AbstractTile[mapSize][mapSize];
