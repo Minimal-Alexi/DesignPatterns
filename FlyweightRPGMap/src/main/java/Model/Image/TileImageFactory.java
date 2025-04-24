@@ -1,8 +1,6 @@
 package Model.Image;
 
-import Model.Logic.Tiles.AbstractTile;
 import Model.Logic.Tiles.TileEnum;
-import Model.Logic.Tiles.WaterTile;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,23 +13,23 @@ public class TileImageFactory {
         if (image == null) {
             switch (tileType) {
                 case ROAD:{
-                    image = new TileImage(image + "road_tile", "road");
+                    image = new TileImage(imageDirectory + "road_tile.jpg", "road");
                     break;
                 }
                 case BUILDING:{
-                    image = new TileImage(image + "building_tile", "building");
+                    image = new TileImage(imageDirectory + "building_tile.jpg", "building");
                     break;
                 }
                 case SWAMP:{
-                    image = new TileImage(image + "swamp_tile", "swamp");
+                    image = new TileImage(imageDirectory + "swamp_tile.jpg", "swamp");
                     break;
                 }
                 case FOREST:{
-                    image = new TileImage(image + "forest_tile", "forest");
+                    image = new TileImage(imageDirectory + "forest_tile.jpg", "forest");
                     break;
                 }
                 case WATER:{
-                    image = new TileImage(image + "water_tile", "water");
+                    image = new TileImage(imageDirectory + "water_tile.jpg", "water");
                     break;
                 }
                 default:{
