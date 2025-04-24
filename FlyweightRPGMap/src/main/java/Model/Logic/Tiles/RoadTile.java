@@ -1,8 +1,10 @@
 package Model.Logic.Tiles;
 
+import Model.Image.TileImage;
+
 public class RoadTile extends AbstractTile {
-    public RoadTile() {
-        super(TileEnum.ROAD,'R',"roads");
+    public RoadTile(TileImage image) {
+        super(image,TileEnum.ROAD,'R',"roads");
     }
 
     @Override
