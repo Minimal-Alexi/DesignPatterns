@@ -8,6 +8,10 @@ import Model.Logic.Tiles.WaterTile;
 import java.util.Random;
 
 public class WildernessMap extends Map {
+    public WildernessMap(int mapSize) {
+        super(mapSize);
+    }
+
     @Override
     protected AbstractTile createTile(){
         Random rand = new Random();

@@ -9,6 +9,10 @@ import java.util.Random;
 
 public class CityMap extends Map {
 
+    public CityMap(int mapSize) {
+        super(mapSize);
+    }
+
     @Override
     protected AbstractTile createTile(){
         Random rand = new Random();

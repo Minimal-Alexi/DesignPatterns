@@ -3,9 +3,10 @@ package Model.Logic.Map;
 import Model.Logic.Tiles.AbstractTile;
 
 public abstract class Map {
-    private final int mapSize = 5;
+    private final int mapSize;
     private AbstractTile[][] map;
-    public Map(){
+    public Map(int mapSize) {
+        this.mapSize = mapSize;
         map = new AbstractTile[mapSize][mapSize];
         for (int i = 0; i < mapSize; i++) {
             for (int j = 0; j < mapSize; j++) {
@@ -21,5 +22,8 @@ public abstract class Map {
             }
             System.out.println();
         }
+    }
+    public AbstractTile[][] getMap(){
+        return map;
     }
 }
