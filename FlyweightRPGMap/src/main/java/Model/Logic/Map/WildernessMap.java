@@ -1,9 +1,6 @@
 package Model.Logic.Map;
 
-import Model.Logic.Tiles.AbstractTile;
-import Model.Logic.Tiles.ForestTile;
-import Model.Logic.Tiles.SwampTile;
-import Model.Logic.Tiles.WaterTile;
+import Model.Logic.Tiles.*;
 
 import java.util.Random;
 
@@ -19,15 +16,15 @@ public class WildernessMap extends Map {
         {
             case 0:
             {
-                return new SwampTile();
+                return new SwampTile(getImageFromFactory(TileEnum.SWAMP));
             }
             case 1:
             {
-                return new ForestTile();
+                return new ForestTile(getImageFromFactory(TileEnum.FOREST));
             }
             case 2:
             {
-                return new WaterTile();
+                return new WaterTile(getImageFromFactory(TileEnum.WATER));
             }
         }
         return null;

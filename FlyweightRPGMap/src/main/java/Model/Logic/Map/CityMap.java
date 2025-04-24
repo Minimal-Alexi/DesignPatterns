@@ -1,9 +1,6 @@
 package Model.Logic.Map;
 
-import Model.Logic.Tiles.AbstractTile;
-import Model.Logic.Tiles.BuildingTile;
-import Model.Logic.Tiles.ForestTile;
-import Model.Logic.Tiles.RoadTile;
+import Model.Logic.Tiles.*;
 
 import java.util.Random;
 
@@ -20,15 +17,15 @@ public class CityMap extends Map {
         {
             case 0:
             {
-                return new RoadTile();
+                return new RoadTile(getImageFromFactory(TileEnum.ROAD));
             }
             case 1:
             {
-                return new ForestTile();
+                return new ForestTile(getImageFromFactory(TileEnum.FOREST));
             }
             case 2:
             {
-                return new BuildingTile();
+                return new BuildingTile(getImageFromFactory(TileEnum.BUILDING));
             }
         }
         return null;

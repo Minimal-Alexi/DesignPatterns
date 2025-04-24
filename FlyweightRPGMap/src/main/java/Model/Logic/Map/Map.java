@@ -1,6 +1,9 @@
 package Model.Logic.Map;
 
+import Model.Image.TileImage;
+import Model.Image.TileImageFactory;
 import Model.Logic.Tiles.AbstractTile;
+import Model.Logic.Tiles.TileEnum;
 
 public abstract class Map {
     private final int mapSize;
@@ -15,6 +18,9 @@ public abstract class Map {
         }
     }
     protected abstract AbstractTile createTile();
+    protected TileImage getImageFromFactory(TileEnum tileType) {
+        return TileImageFactory.getTileImage(tileType);
+    }
     public void display(){
         for(int i = 0; i < mapSize; i++){
             for(int j = 0; j < mapSize; j++){
