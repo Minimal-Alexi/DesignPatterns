@@ -2,7 +2,7 @@ package Model.Logic.Tiles;
 
 public class ForestTile extends AbstractTile{
     public ForestTile() {
-        super('F',"forest");
+        super(TileEnum.FOREST,'F',"forest");
     }
 
     @Override

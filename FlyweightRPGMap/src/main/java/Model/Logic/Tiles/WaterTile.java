@@ -2,7 +2,7 @@ package Model.Logic.Tiles;
 
 public class WaterTile extends AbstractTile{
     public WaterTile() {
-        super('W',"water");
+        super(TileEnum.WATER,'W',"water");
     }
 
     @Override

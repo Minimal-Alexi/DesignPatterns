@@ -2,7 +2,7 @@ package Model.Logic.Tiles;
 
 public class RoadTile extends AbstractTile {
     public RoadTile() {
-        super('R',"roads");
+        super(TileEnum.ROAD,'R',"roads");
     }
 
     @Override
