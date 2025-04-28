@@ -1,7 +1,5 @@
 package Devices;
 
-import Remotes.RemoteI;
-
 public class Device {
     protected String name;
     protected boolean enabled;
