@@ -1,12 +1,17 @@
 public abstract class Device {
+    protected RemoteI remote;
     protected String name;
     protected boolean enabled;
     protected int volume,channel;
-    public Device(String name, int volume, int channel) {
+    public Device(RemoteI remote,String name, int volume, int channel) {
+        this.remote = remote;
         this.name = name;
         this.enabled = false;
         this.volume = volume;
         this.channel = channel;
+    }
+    public RemoteI getRemote() {
+        return remote;
     }
     public boolean isEnabled() {
         return enabled;
@@ -41,5 +46,4 @@ public abstract class Device {
         System.out.println("| Current channel is " + channel);
         System.out.println("------------------------------------\n");
     }
-
 }
