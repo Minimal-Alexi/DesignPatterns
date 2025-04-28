@@ -12,6 +12,11 @@ public class Main {
         testDevice(new Tv());
         testDevice(new SmartTv());
         System.out.println("\n\n\n");
+        SmartTv smartTv = new SmartTv();
+        smartTv.changeWebsiteOption(1);
+        smartTv.printStatus();
+        smartTv.changeWebsiteOption(2);
+        smartTv.printStatus();
     }
     public static void testDevice(DeviceI device) {
         System.out.println("Tests with basic remote.");
