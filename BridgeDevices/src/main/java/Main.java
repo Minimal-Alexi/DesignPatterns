@@ -4,6 +4,7 @@ import Devices.SmartTv;
 import Devices.Tv;
 import Remotes.AdvancedRemote;
 import Remotes.BasicRemote;
+import Remotes.SmartRemote;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +23,13 @@ public class Main {
         AdvancedRemote advancedRemote = new AdvancedRemote(device);
         advancedRemote.power();
         advancedRemote.mute();
+        device.printStatus();
+
+        System.out.println("Tests with smart remote.");
+        SmartRemote smartRemote = new SmartRemote(device);
+        smartRemote.power();
+        smartRemote.mute();
+        smartRemote.voiceControl("unmute",0);
+        smartRemote.voiceControl("change channel",3);
         device.printStatus();
     }}
