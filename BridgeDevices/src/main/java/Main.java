@@ -10,6 +10,7 @@ public class Main {
         testDevice(new Radio());
         testDevice(new Tv());
         testDevice(new SmartTv());
+        System.out.println("\n\n\n");
     }
     public static void testDevice(DeviceI device) {
         System.out.println("Tests with basic remote.");
