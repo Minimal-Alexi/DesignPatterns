@@ -1,9 +1,9 @@
 package Devices;
 
 public class Tv implements DeviceI {
-    private boolean on;
-    private int volume;
-    private int channel;
+    protected boolean on;
+    protected int volume;
+    protected int channel;
     public Tv(){
         on = false;
         volume = 30;
