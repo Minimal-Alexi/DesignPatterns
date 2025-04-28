@@ -1,17 +1,16 @@
-public abstract class Device {
-    protected RemoteI remote;
+package Devices;
+
+import Remotes.RemoteI;
+
+public class Device {
     protected String name;
     protected boolean enabled;
     protected int volume,channel;
-    public Device(RemoteI remote,String name, int volume, int channel) {
-        this.remote = remote;
+    public Device(String name) {
         this.name = name;
         this.enabled = false;
-        this.volume = volume;
-        this.channel = channel;
-    }
-    public RemoteI getRemote() {
-        return remote;
+        this.volume = 30;
+        this.channel = 1;
     }
     public boolean isEnabled() {
         return enabled;
