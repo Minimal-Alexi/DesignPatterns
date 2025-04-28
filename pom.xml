@@ -25,6 +25,7 @@
         <module>ComputerBuilder</module>
         <module>CalendarAdapter</module>
         <module>FlyweightRPGMap</module>
+        <module>BridgeDevices</module>
     </modules>
 
     <properties>
