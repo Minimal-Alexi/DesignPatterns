@@ -21,6 +21,7 @@ public class SmartTv extends Tv{
         System.out.println("| I'm " + (on ? "enabled" : "disabled"));
         System.out.println("| Current volume is " + volume + "%");
         System.out.println("| Current channel is " + channel);
+        System.out.println("| Current website is " + websiteOptions[selectedWebsiteOption]);
         System.out.println("------------------------------------\n");
     }
 }
