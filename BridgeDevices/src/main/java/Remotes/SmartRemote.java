@@ -15,7 +15,7 @@ public class SmartRemote extends AdvancedRemote{
                 break;
             }
             case "unmute":{
-                device.setVolume(0);
+                device.setVolume(50);
                 break;
             }
             case "change channel":{
