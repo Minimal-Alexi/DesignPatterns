@@ -3,9 +3,9 @@ import java.util.ArrayList;
 public class Recommendation implements Prototype{
     private String targetAudience;
     private ArrayList<Book> recommendedBooks;
-    public Recommendation(String targetAudience, ArrayList<Book> recommendedBooks) {
+    public Recommendation(String targetAudience) {
         this.targetAudience = targetAudience;
-        this.recommendedBooks = recommendedBooks;
+        this.recommendedBooks = new ArrayList<>();
     }
     public Recommendation clone() {
         try{
