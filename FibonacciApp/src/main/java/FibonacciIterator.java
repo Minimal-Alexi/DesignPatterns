@@ -2,6 +2,7 @@ import java.util.Iterator;
 
 public class FibonacciIterator implements Iterator<Integer> {
     // The iterator class should hold the current Sequence of numbers, because then you can have multiple iterators running at the same time, but at different parts of the sequence.
+    // Keeping the state in the sequence would lead to all iterators sharing progress, which isn't what this design pattern is about.
     int[] currentSequence = new int[2];
     int returnValue;
     public FibonacciIterator() {
