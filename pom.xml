@@ -28,6 +28,7 @@
         <module>BridgeDevices</module>
         <module>BookSystem</module>
         <module>MinApp</module>
+        <module>FibonacciApp</module>
     </modules>
 
     <properties>
