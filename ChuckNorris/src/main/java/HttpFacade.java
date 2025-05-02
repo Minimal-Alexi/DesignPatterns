@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public class HttpFacade {
-    private HttpClient httpClient;
+    private final HttpClient httpClient;
     public HttpFacade() {
         httpClient = new HttpClient();
     }
