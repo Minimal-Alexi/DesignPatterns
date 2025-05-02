@@ -25,4 +25,10 @@ public class ChatMediatorImpl implements ChatMediator {
             chatClient.rebuildChatClientOptions(chatClients);
         }
     }
+
+    public void showAllClients(){
+        for (ChatClient chatClient : chatClients) {
+            chatClient.show();
+        }
+    }
 }

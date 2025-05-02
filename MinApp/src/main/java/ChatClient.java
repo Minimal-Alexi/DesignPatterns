@@ -37,14 +37,15 @@ public class ChatClient {
             }
         }
     }
+    public void show(){
+        stage.show();
+    }
     private void buildUI(){
         chatLog = new TextArea();
         sendField = new TextField();
         sendButton = new Button("Send");
         sendChoiceBox = new ChoiceBox<>();
         stage = new Stage();
-
-        sendButtonInitialization();
 
         HBox hbox = new HBox();
         hbox.getChildren().addAll(sendField, sendButton,sendChoiceBox);
@@ -55,9 +56,10 @@ public class ChatClient {
         vbox.setAlignment(Pos.CENTER);
         vbox.getChildren().addAll(chatLog, hbox);
 
+        sendButtonInitialization();
+
         stage.setScene(new Scene(vbox));
         stage.setTitle("Chat Client " + username);
-
     }
     private void sendButtonInitialization(){
         sendButton.setOnAction(event -> {
