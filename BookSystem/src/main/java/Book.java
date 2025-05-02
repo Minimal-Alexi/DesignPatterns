@@ -14,6 +14,9 @@ public class Book implements Prototype{
     public String getAuthor(){
         return author;
     }
+    public void setAuthor(String author){
+        this.author = author;
+    }
     public String toString(){
         return "Book \""+title+"\" by "+author;
     }
