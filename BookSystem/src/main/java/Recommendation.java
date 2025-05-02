@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Recommendation implements Prototype{
+public class Recommendation implements Cloneable {
     private String targetAudience;
     private ArrayList<Book> recommendedBooks;
     public Recommendation(String targetAudience) {
