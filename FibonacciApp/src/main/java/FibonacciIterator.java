@@ -6,6 +6,7 @@ public class FibonacciIterator implements Iterator<Integer> {
     public FibonacciIterator() {
         currentSequence[0] = 1;
         currentSequence[1] = 1;
+        currentSequence[2] = currentSequence[0] + currentSequence[1];
         returnValue = 0;
     }
     @Override
