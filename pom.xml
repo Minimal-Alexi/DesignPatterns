@@ -29,6 +29,7 @@
         <module>BookSystem</module>
         <module>MinApp</module>
         <module>FibonacciApp</module>
+        <module>ChuckNorris</module>
     </modules>
 
     <properties>
