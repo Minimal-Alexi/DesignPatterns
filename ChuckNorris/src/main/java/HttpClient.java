@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class JokeClient {
+public class HttpClient {
     public String getRandomJoke() throws Exception {
         String jsonResult = getJsonFromApi("https://api.chucknorris.io/jokes/random");
         return extractJokeFromJson(jsonResult);
@@ -35,7 +35,7 @@ public class JokeClient {
     }
 
     public static void main(String[] args) {
-        JokeClient client = new JokeClient();
+        HttpClient client = new HttpClient();
         try {
             String jokeText = client.getRandomJoke();
             System.out.println(jokeText);
