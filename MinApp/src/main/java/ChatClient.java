@@ -23,8 +23,8 @@ public class ChatClient {
     public ChatClient(String username, ChatMediator mediator) {
         this.username = username;
         this.mediator = mediator;
-        mediator.registerClient(this);
         buildUI();
+        mediator.registerClient(this);
     }
     public void receiveMessage(String message) {
         chatLog.appendText(message + "\n");
