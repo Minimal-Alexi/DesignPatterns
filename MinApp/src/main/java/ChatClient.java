@@ -63,11 +63,8 @@ public class ChatClient {
     }
     private void sendButtonInitialization(){
         sendButton.setOnAction(event -> {
-            sendMessage();
+            mediator.sendMessage(username,sendField.getText(),sendChoiceBox.getValue());
         });
-    }
-    private void sendMessage(){
-        mediator.sendMessage(username,sendField.getText(),sendChoiceBox.getValue());
     }
     public String getUsername() {
         return username;
