@@ -26,6 +26,7 @@
         <module>CalendarAdapter</module>
         <module>FlyweightRPGMap</module>
         <module>BridgeDevices</module>
+        <module>BookSystem</module>
     </modules>
 
     <properties>
