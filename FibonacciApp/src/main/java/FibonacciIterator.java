@@ -1,12 +1,11 @@
 import java.util.Iterator;
 
 public class FibonacciIterator implements Iterator<Integer> {
-    int[] currentSequence = new int[3];
+    int[] currentSequence = new int[2];
     int returnValue;
     public FibonacciIterator() {
         currentSequence[0] = 1;
         currentSequence[1] = 1;
-        currentSequence[2] = currentSequence[0] + currentSequence[1];
         returnValue = 0;
     }
     @Override
@@ -24,8 +23,7 @@ public class FibonacciIterator implements Iterator<Integer> {
         else {
             result = currentSequence[0] + currentSequence[1];
             currentSequence[0] = currentSequence[1];
-            currentSequence[1] = currentSequence[2];
-            currentSequence[2] = result;
+            currentSequence[1] = result;
         }
         return result;
     }
