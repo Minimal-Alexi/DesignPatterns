@@ -27,6 +27,7 @@
         <module>FlyweightRPGMap</module>
         <module>BridgeDevices</module>
         <module>BookSystem</module>
+        <module>MinApp</module>
     </modules>
 
     <properties>
