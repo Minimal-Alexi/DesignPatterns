@@ -1,10 +1,12 @@
 import java.util.Iterator;
 
 public class FibonacciIterator implements Iterator<Integer> {
-    int previous1,previous2;
+    int[] currentSequence = new int[3];
+    int returnValue;
     public FibonacciIterator() {
-        previous1 = 1;
-        previous2 = 1;
+        currentSequence[0] = 1;
+        currentSequence[1] = 1;
+        returnValue = 0;
     }
     @Override
     public boolean hasNext() {
@@ -13,9 +15,17 @@ public class FibonacciIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        int result = previous1 + previous2;
-        previous1 = previous2;
-        previous2 = result;
+        int result;
+        if(returnValue != 2) {
+            result = currentSequence[returnValue];
+            returnValue++;
+        }
+        else {
+            result = currentSequence[0] + currentSequence[1];
+            currentSequence[0] = currentSequence[1];
+            currentSequence[1] = currentSequence[2];
+            currentSequence[2] = result;
+        }
         return result;
     }
 }
