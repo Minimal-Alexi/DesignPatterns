@@ -4,10 +4,11 @@ import javafx.stage.Stage;
 public class App extends Application {
     public void start(Stage primaryStage){
         ChatMediatorImpl mediator = new ChatMediatorImpl();
-        mediator.registerClient(new ChatClient("Banana lover",mediator));
-        mediator.registerClient(new ChatClient("Minerva-A",mediator));
-        mediator.registerClient(new ChatClient("Joker",mediator));
-        mediator.showAllClients();
+        ChatClient chatClient1 = new ChatClient("Banana lover",mediator), chatClient2 = new ChatClient("Minerva-A",mediator),
+                chatClient3 = new ChatClient("Joker",mediator);
+        chatClient1.show();
+        chatClient2.show();
+        chatClient3.show();
     }
     public static void main(String[] args) {
         launch(args);
