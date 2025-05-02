@@ -35,4 +35,12 @@ public class Recommendation implements Prototype{
     public void removeRecommendedBook(Book recommendedBook) {
         this.recommendedBooks.remove(recommendedBook);
     }
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Recommendations for: " + this.targetAudience + "\n");
+        for(Book book : this.recommendedBooks){
+            sb.append("\t" + book.toString() + "\n");
+        }
+        return sb.toString();
+    }
 }

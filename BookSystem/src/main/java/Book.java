@@ -14,4 +14,7 @@ public class Book implements Prototype{
     public String getAuthor(){
         return author;
     }
+    public String toString(){
+        return "Book \""+title+"\" by "+author;
+    }
 }
