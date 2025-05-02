@@ -11,7 +11,7 @@ public class HttpClient {
         return extractJokeFromJson(jsonResult);
     }
 
-    private String getJsonFromApi(String apiUrl) throws Exception {
+    public String getJsonFromApi(String apiUrl) throws Exception {
         URL url = new URL(apiUrl);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
@@ -28,7 +28,7 @@ public class HttpClient {
         }
     }
 
-    private String extractJokeFromJson(String json) throws Exception {
+    public String extractJokeFromJson(String json) throws Exception {
         JSONParser parser = new JSONParser();
         JSONObject jsonObject = (JSONObject) parser.parse(json);
         return (String) jsonObject.get("value");
