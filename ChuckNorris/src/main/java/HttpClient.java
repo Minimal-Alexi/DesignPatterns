@@ -8,7 +8,7 @@ import org.json.simple.parser.JSONParser;
 public class HttpClient {
     public String getRandomJoke() throws Exception {
         String jsonResult = getJsonFromApi("https://api.chucknorris.io/jokes/random");
-        return extractJokeFromJson(jsonResult);
+        return extractAttributeFromJson(jsonResult,"value");
     }
 
     public String getJsonFromApi(String apiUrl) throws Exception {
@@ -28,19 +28,9 @@ public class HttpClient {
         }
     }
 
-    public String extractJokeFromJson(String json) throws Exception {
+    public String extractAttributeFromJson(String json,String value) throws Exception {
         JSONParser parser = new JSONParser();
         JSONObject jsonObject = (JSONObject) parser.parse(json);
-        return (String) jsonObject.get("value");
-    }
-
-    public static void main(String[] args) {
-        HttpClient client = new HttpClient();
-        try {
-            String jokeText = client.getRandomJoke();
-            System.out.println(jokeText);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        return (String) jsonObject.get(value);
     }
 }
