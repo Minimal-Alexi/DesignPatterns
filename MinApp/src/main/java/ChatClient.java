@@ -32,7 +32,9 @@ public class ChatClient {
     public void rebuildChatClientOptions(ArrayList<ChatClient> chatClients){
         sendChoiceBox.getItems().clear();
         for(ChatClient chatClient : chatClients){
-            sendChoiceBox.getItems().add(chatClient.getUsername());
+            if(!chatClient.getUsername().equals(username)){
+                sendChoiceBox.getItems().add(chatClient.getUsername());
+            }
         }
     }
     private void buildUI(){
@@ -41,6 +43,8 @@ public class ChatClient {
         sendButton = new Button("Send");
         sendChoiceBox = new ChoiceBox<>();
         stage = new Stage();
+
+        sendButtonInitialization();
 
         HBox hbox = new HBox();
         hbox.getChildren().addAll(sendField, sendButton,sendChoiceBox);
