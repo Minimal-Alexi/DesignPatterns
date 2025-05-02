@@ -5,7 +5,7 @@ public class Main {
         FibonacciSequence fibonacciSequence = new FibonacciSequence();
         Iterator<Integer> iterator = fibonacciSequence.iterator();
         int number = 1;
-        while (number != 10) {
+        while (number <= 10) {
             System.out.println(number +": "+iterator.next());
             number++;
         }
