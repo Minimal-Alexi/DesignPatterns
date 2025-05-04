@@ -30,8 +30,8 @@ public class CanvasStatus {
             this.cursorPositionY = cursorPositionY;
         }
     }
-    private boolean checkLimits(int newPosition){
-        return newPosition >= 0 && newPosition < canvasSize;
+    public boolean[][] getCanvas() {
+        return canvas;
     }
     public String getCanvasCode() {
         StringBuilder builder = new StringBuilder();
@@ -52,5 +52,11 @@ public class CanvasStatus {
         }
         builder.append("};");
         return builder.toString();
+    }
+    public void toggleCurrentPixel(){
+        canvas[cursorPositionX][cursorPositionY] = !canvas[cursorPositionX][cursorPositionY];
+    }
+    private boolean checkLimits(int newPosition){
+        return newPosition >= 0 && newPosition < canvasSize;
     }
 }
