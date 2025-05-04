@@ -5,6 +5,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 
 public class PixelArtController {
+    private final static int pixelSize = 16;
     @FXML
     private Canvas canvasPixelArt;
     @FXML
