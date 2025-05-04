@@ -30,6 +30,7 @@
         <module>MinApp</module>
         <module>FibonacciApp</module>
         <module>ChuckNorris</module>
+        <module>PixelArt</module>
     </modules>
 
     <properties>
