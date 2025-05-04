@@ -30,10 +30,27 @@ public class CanvasStatus {
             this.cursorPositionY = cursorPositionY;
         }
     }
-    public boolean[][] getCanvas() {
-        return canvas;
-    }
     private boolean checkLimits(int newPosition){
         return newPosition >= 0 && newPosition < canvasSize;
+    }
+    public String getCanvasCode() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("private boolean[][] canvas = {\n");
+        for (int i = 0; i < canvasSize; i++) {
+            builder.append("    {");
+            for (int j = 0; j < canvasSize; j++) {
+                builder.append(canvas[i][j] ? "1" : "0");
+                if (j < canvasSize - 1) {
+                    builder.append(", ");
+                }
+            }
+            builder.append("}");
+            if (i < canvasSize - 1) {
+                builder.append(",");
+            }
+            builder.append("\n");
+        }
+        builder.append("};");
+        return builder.toString();
     }
 }
