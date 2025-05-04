@@ -24,9 +24,13 @@ public class PixelArtController {
         graphicsContext = canvasPixelArt.getGraphicsContext2D();
         canvasStatus = new CanvasStatus(this);
         commandInitialization();
+        buttonGenerateCode.setFocusTraversable(false);
         buttonGenerateCode.setOnAction(e -> {
             commandInvoker.generateCode();
+            vBox.requestFocus();
         });
+        vBox.setFocusTraversable(true);
+        vBox.requestFocus();
         vBox.setOnKeyPressed(e -> {
             switch (e.getCode()){
                 case UP:{
@@ -53,6 +57,7 @@ public class PixelArtController {
         });
     }
     public void refreshCanvas(boolean[][] canvas,int cursorX,int cursorY){
+        graphicsContext.clearRect(0, 0, canvasPixelArt.getWidth(), canvasPixelArt.getHeight());
         for(int i = 0; i < canvas.length; i++){
             for(int j = 0; j < canvas[i].length; j++){
                 if(canvas[i][j]){

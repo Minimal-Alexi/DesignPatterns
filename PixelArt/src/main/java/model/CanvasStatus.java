@@ -29,14 +29,14 @@ public class CanvasStatus {
     public void setCursorPositionX(int cursorPositionX) {
         if(checkLimits(cursorPositionX)){
             this.cursorPositionX = cursorPositionX;
+            controller.refreshCanvas(canvas,cursorPositionX,cursorPositionY);
         }
-        controller.refreshCanvas(canvas,cursorPositionX,cursorPositionY);
     }
     public void setCursorPositionY(int cursorPositionY) {
         if(checkLimits(cursorPositionX)){
             this.cursorPositionY = cursorPositionY;
+            controller.refreshCanvas(canvas,cursorPositionX,cursorPositionY);
         }
-        controller.refreshCanvas(canvas,cursorPositionX,cursorPositionY);
     }
     public boolean[][] getCanvas() {
         return canvas;
