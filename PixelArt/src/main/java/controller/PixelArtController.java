@@ -31,18 +31,23 @@ public class PixelArtController {
             switch (e.getCode()){
                 case UP:{
                     commandInvoker.moveUp();
+                    break;
                 }
                 case DOWN:{
                     commandInvoker.moveDown();
+                    break;
                 }
                 case LEFT:{
                     commandInvoker.moveLeft();
+                    break;
                 }
                 case RIGHT:{
                     commandInvoker.moveRight();
+                    break;
                 }
                 case SPACE:{
                     commandInvoker.togglePixel();
+                    break;
                 }
             }
         });
