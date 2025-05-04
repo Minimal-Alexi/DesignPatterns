@@ -56,7 +56,4 @@ public class PixelArtController {
             commandInvoker.generateCode();
         });
     }
-    private void canvasUseInit(){
-
-    }
 }
