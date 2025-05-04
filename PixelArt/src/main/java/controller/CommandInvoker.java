@@ -3,7 +3,7 @@ package controller;
 import commands.Command;
 
 public class CommandInvoker {
-    private Command generateCodeCommand, moveDownCommand,moveUpCommand,moveRightCommand,moveLeftCommand,
+    private final Command generateCodeCommand, moveDownCommand,moveUpCommand,moveRightCommand,moveLeftCommand,
             togglePixelCommand;
     public CommandInvoker(Command generateCodeCommand,Command moveDownCommand,Command moveUpCommand,
                           Command moveRightCommand,Command moveLeftCommand,
