@@ -30,7 +30,6 @@ public class PixelArtController {
             vBox.requestFocus();
         });
         vBox.setFocusTraversable(true);
-        vBox.requestFocus();
         vBox.setOnKeyPressed(e -> {
             switch (e.getCode()){
                 case UP:{
@@ -55,8 +54,10 @@ public class PixelArtController {
                 }
             }
         });
+        vBox.requestFocus();
     }
     public void refreshCanvas(boolean[][] canvas,int cursorX,int cursorY){
+        System.out.println(cursorX+" "+cursorY);
         graphicsContext.clearRect(0, 0, canvasPixelArt.getWidth(), canvasPixelArt.getHeight());
         for(int i = 0; i < canvas.length; i++){
             for(int j = 0; j < canvas[i].length; j++){
@@ -70,7 +71,7 @@ public class PixelArtController {
             }
         }
         graphicsContext.setStroke(Color.WHITE);
-        graphicsContext.strokeRect(cursorX*pixelSize,cursorY*pixelSize,pixelSize,pixelSize);
+        graphicsContext.strokeRect(cursorY*pixelSize,cursorX*pixelSize,pixelSize,pixelSize);
     }
     private void commandInitialization(){
         GenerateCodeCommand generateCodeCommand = new GenerateCodeCommand(canvasStatus);

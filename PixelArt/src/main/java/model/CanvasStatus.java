@@ -33,7 +33,7 @@ public class CanvasStatus {
         }
     }
     public void setCursorPositionY(int cursorPositionY) {
-        if(checkLimits(cursorPositionX)){
+        if(checkLimits(cursorPositionY)){
             this.cursorPositionY = cursorPositionY;
             controller.refreshCanvas(canvas,cursorPositionX,cursorPositionY);
         }

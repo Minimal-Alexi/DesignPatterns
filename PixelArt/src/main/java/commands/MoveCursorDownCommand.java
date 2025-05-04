@@ -9,6 +9,6 @@ public class MoveCursorDownCommand implements Command {
     }
     @Override
     public void execute() {
-        canvasStatus.setCursorPositionY(canvasStatus.getCursorPositionY() + 1);
+        canvasStatus.setCursorPositionX(canvasStatus.getCursorPositionX() + 1);
     }
 }

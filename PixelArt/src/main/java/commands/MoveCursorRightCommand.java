@@ -9,7 +9,7 @@ public class MoveCursorRightCommand implements Command {
     }
     @Override
     public void execute() {
-        canvasStatus.setCursorPositionX(canvasStatus.getCursorPositionX() + 1);
+        canvasStatus.setCursorPositionY(canvasStatus.getCursorPositionY() + 1);
 
     }
 }
