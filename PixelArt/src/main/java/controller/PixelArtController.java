@@ -27,6 +27,25 @@ public class PixelArtController {
         buttonGenerateCode.setOnAction(e -> {
             commandInvoker.generateCode();
         });
+        vBox.setOnKeyPressed(e -> {
+            switch (e.getCode()){
+                case UP:{
+                    commandInvoker.moveUp();
+                }
+                case DOWN:{
+                    commandInvoker.moveDown();
+                }
+                case LEFT:{
+                    commandInvoker.moveLeft();
+                }
+                case RIGHT:{
+                    commandInvoker.moveRight();
+                }
+                case SPACE:{
+                    commandInvoker.togglePixel();
+                }
+            }
+        });
     }
     public void refreshCanvas(boolean[][] canvas,int cursorX,int cursorY){
         for(int i = 0; i < canvas.length; i++){
