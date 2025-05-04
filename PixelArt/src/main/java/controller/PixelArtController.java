@@ -24,7 +24,9 @@ public class PixelArtController {
         graphicsContext = canvasPixelArt.getGraphicsContext2D();
         canvasStatus = new CanvasStatus(this);
         commandInitialization();
-
+        buttonGenerateCode.setOnAction(e -> {
+            commandInvoker.generateCode();
+        });
     }
     public void refreshCanvas(boolean[][] canvas,int cursorX,int cursorY){
         for(int i = 0; i < canvas.length; i++){
@@ -50,10 +52,5 @@ public class PixelArtController {
         TogglePixelCommand togglePixelCommand = new TogglePixelCommand(canvasStatus);
         commandInvoker = new CommandInvoker(generateCodeCommand,moveCursorDownCommand,moveCursorUpCommand,
                 moveCursorRightCommand,moveCursorLeftCommand,togglePixelCommand);
-    }
-    private void codeGenerator(){
-        buttonGenerateCode.setOnAction(e -> {
-            commandInvoker.generateCode();
-        });
     }
 }
