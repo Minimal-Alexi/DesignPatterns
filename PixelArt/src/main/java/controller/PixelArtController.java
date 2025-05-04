@@ -1,6 +1,7 @@
 package controller;
 
 import commands.*;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -54,7 +55,7 @@ public class PixelArtController {
                 }
             }
         });
-        vBox.requestFocus();
+        Platform.runLater(() -> vBox.requestFocus());
     }
     public void refreshCanvas(boolean[][] canvas,int cursorX,int cursorY){
         System.out.println(cursorX+" "+cursorY);
