@@ -1,5 +1,7 @@
 package model;
 
+import controller.PixelArtController;
+
 public class CanvasStatus {
     private int cursorPositionX,cursorPositionY;
     private static final int canvasSize = 8;
@@ -9,10 +11,14 @@ public class CanvasStatus {
     // Just know I thought about what I'm doing.
     // Kiitos :p
     private boolean [][] canvas;
-    public CanvasStatus() {
+    // Listener architecture.
+    private PixelArtController controller;
+    public CanvasStatus(PixelArtController controller) {
         canvas = new boolean[canvasSize][canvasSize];
+        this.controller = controller;
         cursorPositionX = 0;
         cursorPositionY = 0;
+        controller.refreshCanvas(canvas,cursorPositionX,cursorPositionY);
     }
     public int getCursorPositionX() {
         return cursorPositionX;

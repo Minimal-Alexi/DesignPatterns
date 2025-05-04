@@ -6,10 +6,11 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import model.CanvasStatus;
 
 public class PixelArtController {
-    private final static int pixelSize = 16;
+    private final static int pixelSize = 64;
     private CanvasStatus canvasStatus;
     private CommandInvoker commandInvoker;
     private GraphicsContext graphicsContext;
@@ -20,10 +21,25 @@ public class PixelArtController {
     @FXML
     private Button buttonGenerateCode;
     public void initialize(){
-        canvasStatus = new CanvasStatus();
-        refreshCanvas();
+        graphicsContext = canvasPixelArt.getGraphicsContext2D();
+        canvasStatus = new CanvasStatus(this);
         commandInitialization();
 
+    }
+    public void refreshCanvas(boolean[][] canvas,int cursorX,int cursorY){
+        for(int i = 0; i < canvas.length; i++){
+            for(int j = 0; j < canvas[i].length; j++){
+                if(canvas[i][j]){
+                    graphicsContext.setFill(Color.DARKGREEN);
+                }
+                else {
+                    graphicsContext.setFill(Color.BLACK);
+                }
+                graphicsContext.fillRect(j*pixelSize,i*pixelSize,pixelSize,pixelSize);
+            }
+        }
+        graphicsContext.setStroke(Color.WHITE);
+        graphicsContext.strokeRect(cursorX*pixelSize,cursorY*pixelSize,pixelSize,pixelSize);
     }
     private void commandInitialization(){
         GenerateCodeCommand generateCodeCommand = new GenerateCodeCommand(canvasStatus);
@@ -34,9 +50,6 @@ public class PixelArtController {
         TogglePixelCommand togglePixelCommand = new TogglePixelCommand(canvasStatus);
         commandInvoker = new CommandInvoker(generateCodeCommand,moveCursorDownCommand,moveCursorUpCommand,
                 moveCursorRightCommand,moveCursorLeftCommand,togglePixelCommand);
-    }
-    private void refreshCanvas(){
-
     }
     private void codeGenerator(){
         buttonGenerateCode.setOnAction(e -> {
